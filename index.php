@@ -51,7 +51,7 @@
           <?php
           if(isset($_POST['but'])){
           $link = $_POST['name'];
-	  $NameLink = "http://kirilushak.temp.swtest.ru/curl/curl.php?url=".$link;
+	  $NameLink = "http://example.com/curl.php?url=".$link;
 	  $Name = file_get_contents($NameLink);
 	  exec("yt-dlp -f 'ba' -x --audio-format mp3 . '$link' .  -o '%(id)s.%(ext)s'");
 	  $dir = "/var/www/html/"; 
